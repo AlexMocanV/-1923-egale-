@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+unsigned long long int n, a, b, pas = 0, pc, nrcif = 0, i, j, k,z;
+
+int main()
+{
+    ifstream fin("egale.in");
+    ofstream fout("egale.out");
+
+    fin >> n;
+
+    if(n == 1)
+    {
+        fin >> a >> b;
+       
+       k=a;
+       while(k<=b&&k<10)
+       {
+           fout<<k<<" ";
+           k++;
+       }
+       k=1;
+       z=11;
+       while(k*z<a)
+    {
+        if(k%10==9)
+        {
+            z=z*10+1;
+            k=1;
+        }
+        else
+        {
+            k++;
+        }
+    }
+    while(k*z<=b)
+    {
+        fout<<k*z<<" ";
+        if(k%10==9)
+        {
+            z=z*10+1;
+            k=1;
+        }
+        else
+        {
+            k++;
+        }
+        
+    }}
+    else
+    {
+        int x;
+
+        fin >> x;
+       
+        for(i = 1; i <= x; i++)
+        {
+            for(j = 1; j <= 9; j++)
+            {
+                for(k = 1; k <= i; k++)
+                {
+                    fout << j;
+                }
+                fout << " ";
+            }
+        }
+    }
+
+return 0;
+
+    
+}
